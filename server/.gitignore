@@ -26,6 +26,7 @@ build/
 .env
 uploads
 eslint.config.mjs
+coverage/
 
 # Editors and IDEs
 .vscode/

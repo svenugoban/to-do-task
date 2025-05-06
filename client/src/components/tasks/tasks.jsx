@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Box, Typography, Button, Grid, Card, CardContent, Select, Divider } from "@mui/material";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import PersonIcon from "@mui/icons-material/Person";
-import DescriptionIcon from "@mui/icons-material/Description";
-import PeopleIcon from "@mui/icons-material/People";
+import { Box, Typography, Button, Grid, Card, CardContent, Divider } from "@mui/material";
 import TaskCreateForm from "./taskCreateForm";
 import CustomDialog from "../../common/customDialog";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import { FaUser } from "react-icons/fa";
 
 const Tasks = () => {
   const user = useSelector((state) => state.auth.user);

@@ -19,7 +19,6 @@ const createTask = async (req, res) => {
 };
 
 // Get all tasks
-// In the backend controller
 const getAllTasks = async (req, res) => {
   try {
     const tasks = await Task.getAll(); // Get all tasks from DB

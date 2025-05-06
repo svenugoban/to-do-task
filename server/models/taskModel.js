@@ -2,24 +2,24 @@ const pool = require("../config/db");
 
 class Task {
   static async create(taskData) {
-    const { title, description, status, completedBy } = taskData;
+    const { title, description, status } = taskData;
 
     const [result] = await pool.query(
-      `INSERT INTO task (title, description, status, completedBy)
-       VALUES (?, ?, ?, ?)`,
-      [title, description, status, completedBy]
+      `INSERT INTO task (title, description, status)
+       VALUES (?, ?, ?)`,
+      [title, description, status]
     );
 
     return result.insertId;
   }
 
   static async update(id, updatedData) {
-    const { title, description, status, completedBy } = updatedData;
+    const { status, completedBy } = updatedData;
 
     const [result] = await pool.query(
-      `UPDATE task SET title = ?, description = ?, status = ?, completedBy = ?
+      `UPDATE task SET status = ?, completedBy = ?
        WHERE id = ?`,
-      [title, description, status, completedBy, id]
+      [status, completedBy, id]
     );
 
     return result;
@@ -30,7 +30,6 @@ class Task {
     const [rows] = await pool.query(query);
     return rows;
   }
-  
 
   static async getById(id) {
     const [rows] = await pool.query("SELECT * FROM task WHERE id = ?", [id]);

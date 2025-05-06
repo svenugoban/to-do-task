@@ -16,6 +16,6 @@ CREATE TABLE task (
   title VARCHAR(255) NOT NULL,
   description TEXT NOT NULL,
   status VARCHAR(255) NOT NULL,
-  completedBy VARCHAR(255) NOT NULL,
+  completedBy VARCHAR(255) NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

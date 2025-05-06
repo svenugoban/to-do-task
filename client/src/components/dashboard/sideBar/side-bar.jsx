@@ -60,7 +60,7 @@ const Sidebar = ({ setIsSidebarCollapsed }) => {
           <ListItemText primary='Tasks' className='sidebar-text' />
         </ListItem>
 
-        <Typography ml={2} mt={55}></Typography>
+        <Typography ml={2} mt={65}></Typography>
         <ListItem
           button
           onClick={() => {

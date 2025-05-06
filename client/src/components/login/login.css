@@ -1,0 +1,43 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  text-align: center;
+  width: 450px;
+  margin-left: 60px;
+}
+
+.register {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register:hover {
+  text-decoration: underline;
+}
+
+.form-details {
+  margin-top: 10px;
+}
+
+.login-button {
+  color: #54bbe3;
+  width: 100%;
+  padding-top: 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logo {
+  width: 150px; /* Adjust logo size */
+  transition: width 0.3s ease; /* Smooth transition for resizing */
+}

@@ -55,7 +55,7 @@ const Login = () => {
       <div className='login-form'>
         <Grid item xs={12} sm={8} md={4}>
           <Box p={4}>
-            <img src='/images/logo.png' alt='event' className='logo' />
+            <img src='/images/logo.png' alt='task' className='logo' />
             <Typography align='center' sx={{ fontSize: "38px", color: "black" }}>
               Welcome back
             </Typography>

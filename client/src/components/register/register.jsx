@@ -69,7 +69,7 @@ const Register = () => {
         {({ values, handleChange, handleSubmit, errors, touched, isSubmitting }) => (
           <Form className='register-form' onSubmit={handleSubmit}>
             <Grid item xs={12} sm={8} md={4}>
-              <img src='/images/logo.png' alt='event' className='logo' />
+              <img src='/images/logo.png' alt='task' className='logo' />
               <Typography variant='h4' align='center' gutterBottom>
                 Register Form
               </Typography>

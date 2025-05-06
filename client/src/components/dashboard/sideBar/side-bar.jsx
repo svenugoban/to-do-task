@@ -41,7 +41,7 @@ const Sidebar = ({ setIsSidebarCollapsed }) => {
             <br />
           </>
         )}
-        <img src='/images/logo.png' alt='event' className='sidebar-logo' />
+        <img src='/images/logo.png' alt='task' className='sidebar-logo' />
       </Box>
       <List>
         <ListItem
@@ -57,7 +57,7 @@ const Sidebar = ({ setIsSidebarCollapsed }) => {
           <ListItemIcon>
             <VerifiedUserIcon fontSize='small' sx={{ color: isActive("/tasks") ? "#1976d2" : "inherit" }} />
           </ListItemIcon>
-          <ListItemText primary='Events' className='sidebar-text' />
+          <ListItemText primary='Tasks' className='sidebar-text' />
         </ListItem>
 
         <Typography ml={2} mt={55}></Typography>

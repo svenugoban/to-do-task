@@ -1,0 +1,35 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
+  text-align: center;
+  width: 450px;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+
+.hide-form {
+  width: 450px;
+}
+.register-form h2 {
+  text-align: right;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.register-form .MuiTextField-root,
+.register-form .MuiFormControl-root {
+  margin-bottom: 15px;
+}
+
+.register-form .MuiButtonBase-root {
+  margin-top: 20px;
+}
+
+.logo {
+  width: 150px; /* Adjust logo size */
+  transition: width 0.3s ease; /* Smooth transition for resizing */
+}

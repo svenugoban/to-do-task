@@ -41,7 +41,7 @@ const Dashboard = () => {
   useEffect(() => {
     const handlePopState = () => {
       if (window.location.pathname === "/login") {
-        navigate("/dashboard", { replace: true }); // Redirect to dashboard instead of login
+        navigate("/tasks", { replace: true }); // Redirect to dashboard instead of login
       }
     };
 

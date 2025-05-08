@@ -1,8 +1,7 @@
-version: "3.8"
-
 services:
   client:
     build: ./client
+    working_dir: /app
     ports:
       - "3000:3000"
     depends_on:
@@ -17,21 +16,27 @@ services:
     env_file:
       - .env
     depends_on:
-      - mysql
+    - db
+    command: ["sh", "wait-for.sh", "db", "npm", "start"]
     networks:
       - todo-net
 
-  mysql:
+  db:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: todo_db
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DATABASE}
     volumes:
       - mysql-data:/var/lib/mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"
     networks:
       - todo-net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
 volumes:
   mysql-data:

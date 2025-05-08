@@ -5,8 +5,8 @@ dotenv.config();
 
 // Create a connection pool
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
+  host: 'db',
+  user: 'root',
   password: process.env.DB_PASSWORD,
   database: process.env.DATABASE,
   waitForConnections: true,

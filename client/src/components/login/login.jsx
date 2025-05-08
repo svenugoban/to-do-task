@@ -33,7 +33,7 @@ const Login = () => {
       );
       dispatch(setUser(response.data.user));
       login(response.data.token);
-      navigate("/dashboard");
+      navigate("/tasks");
     } catch (err) {
       if (err.response && err.response.data) {
         const errorMessage = err.response.data.msg;

@@ -9,5 +9,8 @@ COPY . .
 
 RUN npm run build
 
+# Install serve globally during build
+RUN npm install -g serve
+
 EXPOSE 3000
-CMD ["npx", "serve", "-s", "build"]
+CMD ["serve", "-s", "build"]

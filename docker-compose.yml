@@ -28,7 +28,7 @@ services:
       MYSQL_DATABASE: ${DATABASE}
     volumes:
       - mysql-data:/var/lib/mysql
-      - ./config/init:/docker-entrypoint-initdb.d  # Mounts the SQL init script
+      - ./config/init:/docker-entrypoint-initdb.d
     ports:
       - "3307:3306"
     networks:
